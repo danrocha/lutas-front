@@ -1,10 +1,14 @@
+import blog from './content/blog.json'
+import livros from './content/livros.json'
+import eventos from './content/eventos.json'
+
 export default {
   mode: 'universal',
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.npm_package_name || 'Lutas Anticapital',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -14,12 +18,23 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Pathway+Gothic+One&text=LUTAS%20ANTICAPITAL&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Cardo|Lato&display=swap'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: 'red' },
   /*
    ** Global CSS
    */
@@ -27,7 +42,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~plugins/filters.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -49,6 +64,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
   /*
    ** Build configuration
    */
@@ -56,6 +72,24 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+        // include: path.resolve(__dirname, 'contents'),
+        options: {
+          vue: {
+            root: 'dynamicMarkdown'
+          }
+        }
+      })
+    }
+  },
+  generate: {
+    routes: [
+      ...blog.map((blog) => `/blog/${blog.slug}`),
+      ...livros.map((livro) => `/livro/${livro.slug}`),
+      ...eventos.map((evento) => `/eventos/${evento.slug}`)
+    ]
   }
 }
