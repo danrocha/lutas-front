@@ -46,7 +46,7 @@ collections:
       - {label: "Nome", name: "name", widget: "string", required: true}
       - {label: "Descrição", name: "title", widget: "string", required: false, hint: "Pequena descrição do autor: Prof., Dr., etc"}
       - {label: "Biografia", name: "body", widget: "markdown", required: true}
-      - {label: "Email", name: "email", widget: "email", required: false}
+      - {label: "Email", name: "email", widget: "string", required: false}
       - {label: "Site", name: "url", widget: "string", required: false}
       - {label: "Data de Criação", name: "date", widget: "datetime", required: true}
   - name: "eventos"
