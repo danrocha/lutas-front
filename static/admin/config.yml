@@ -23,10 +23,12 @@ collections:
       - {label: "Data de Atualização", name: "update", widget: "datetime", required: false}
   - name: "livros"
     label: "Livros"
+    label_singular: "Livro"
     folder: "content/livros"
     create: true
     slug: "{{slug}}"
     sort: "publish_date:desc"
+    preview: false
     fields:
       - {label: "Título", name: "title", widget: "string", required: true}
       - {label: Resumo 164-220, name: summary, widget: text, required: true, pattern: ['.{164,220}', "Deve ser entre 164 e 220 caracteres"]}
@@ -38,13 +40,15 @@ collections:
       - {label: "Data de Postagem no Site", name: "publish_date", widget: "datetime", required: true}
   - name: "autores"
     label: "Autores"
+    label_singular: "Autor(a)"
     folder: "content/autores"
     create: true
     slug: "{{slug}}"
-    sort: "date:desc"
+    sort: "title:desc"
+    preview: false
     fields:
-      - {label: "Nome", name: "name", widget: "string", required: true}
-      - {label: "Descrição", name: "title", widget: "string", required: false, hint: "Pequena descrição do autor: Prof., Dr., etc"}
+      - {label: "Nome", name: "title", widget: "string", required: true}
+      - {label: "Descrição", name: "description", widget: "string", required: false, hint: "Pequena descrição do autor: Prof., Dr., etc"}
       - {label: "Biografia", name: "body", widget: "markdown", required: true}
       - {label: "Email", name: "email", widget: "string", required: false}
       - {label: "Site", name: "url", widget: "string", required: false}
@@ -52,10 +56,12 @@ collections:
       - {label: "Data de Criação", name: "date", widget: "datetime", required: true}
   - name: "eventos"
     label: "Eventos"
+    label_singular: "Evento"
     folder: "content/eventos"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}--{{slug}}"
     sort: "date:desc"
+    preview: false
     fields:
       - {label: "Tipo", name: "type", widget: "string", required: true, hint: "Tipo de evento"}
       - {label: "Nome", name: "title", widget: "string", required: true}
