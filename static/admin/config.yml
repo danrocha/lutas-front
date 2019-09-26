@@ -46,8 +46,9 @@ collections:
     slug: "{{slug}}"
     sort: "title:desc"
     preview: false
+    identifier_field: name
     fields:
-      - {label: "Nome", name: "title", widget: "string", required: true}
+      - {label: "Nome", name: "name", widget: "string", required: true}
       - {label: "Descrição", name: "description", widget: "string", required: false, hint: "Pequena descrição do autor: Prof., Dr., etc"}
       - {label: "Biografia", name: "body", widget: "markdown", required: true}
       - {label: "Email", name: "email", widget: "string", required: false}
