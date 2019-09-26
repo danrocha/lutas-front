@@ -1,5 +1,5 @@
 ---
-title: Henrique Tahan Novaes
+name: Henrique Tahan Novaes
 description: Prof. Dr. Bla bla bla
 email: henrique@email.com.br
 headshot: /images/uploads/henrique.jpg
