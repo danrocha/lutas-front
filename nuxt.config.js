@@ -1,6 +1,7 @@
 import blog from './content/blog.json'
 import livros from './content/livros.json'
 import eventos from './content/eventos.json'
+import autores from './content/autores.json'
 
 export default {
   mode: 'universal',
@@ -89,7 +90,8 @@ export default {
     routes: [
       ...blog.map((blog) => `/blog/${blog.slug}`),
       ...livros.map((livro) => `/livro/${livro.slug}`),
-      ...eventos.map((evento) => `/eventos/${evento.slug}`)
+      ...eventos.map((evento) => `/eventos/${evento.slug}`),
+      ...autores.map((autor) => `/autores/${autor.slug}`)
     ]
   }
 }

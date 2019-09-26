@@ -16,5 +16,6 @@ author:
 release_date: 2019-09-26T17:08:41.255Z
 price: 40
 publish_date: 2019-09-26T17:08:41.268Z
+update_date: 2019-09-26T17:08:41.268Z
 ---
 Com o intuito de contribuir para a compreensão dos desafios impostos à classe trabalhadora e à educação em tempos de extrema concentração e voracidade do capital, apresentamos uma coletânea organizada pelos pesquisadores brasileiros, Eraldo Leme Batista e Paulino José Orso, da qual fazem parte onze artigos, escritos por um pesquisador mexicano, quatro argentinos e treze brasileiros, pertencentes a diferentes instituições educacionais e regiões do país.

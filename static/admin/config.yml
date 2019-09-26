@@ -19,8 +19,8 @@ collections:
       - {label: "Texto", name: "body", widget: "markdown", required: true}
       - {label: "Imagem", name: "thumbnail", widget: "image", required: false}
       - {label: "Autor(es)", name: "author", widget: "relation", required: true, collection: "autores", searchFields: ["name"], valueField: "name", multiple: true, displayFields: ["name"]}
-      - {label: "Data de Postagem no Site", name: "date", widget: "datetime", required: true}
-      - {label: "Data de Atualização", name: "update", widget: "datetime", required: false}
+      - {label: "Data de Postagem no Site", name: "publish_date", widget: "datetime", required: true}
+      - {label: "Data de Atualização", name: "update_date", widget: "datetime", required: false}
   - name: "livros"
     label: "Livros"
     label_singular: "Livro"
@@ -38,6 +38,7 @@ collections:
       - {label: "Data de Lançamento", name: "release_date", widget: "datetime", required: true}
       - {label: "Preço", name: "price", widget: "number", required: true, valueType: "float"}
       - {label: "Data de Postagem no Site", name: "publish_date", widget: "datetime", required: true}
+      - {label: "Data de Atualização", name: "update_date", widget: "datetime", required: false}
   - name: "autores"
     label: "Autores"
     label_singular: "Autor(a)"
@@ -54,7 +55,8 @@ collections:
       - {label: "Email", name: "email", widget: "string", required: false}
       - {label: "Site", name: "url", widget: "string", required: false}
       - {label: "Foto", name: "headshot", widget: "image", required: false}
-      - {label: "Data de Criação", name: "date", widget: "datetime", required: true}
+      - {label: "Data de Criação", name: "publish_date", widget: "datetime", required: true}
+      - {label: "Data de Atualização", name: "update_date", widget: "datetime", required: false}
   - name: "eventos"
     label: "Eventos"
     label_singular: "Evento"
@@ -73,3 +75,4 @@ collections:
       - {label: "Descrição", name: "body", widget: "markdown", required: true}
       - {label: "Imagem", name: "thumbnail", widget: "image", required: false}
       - {label: "Data de Postagem no Site", name: "publish_date", widget: "datetime", required: true}
+      - {label: "Data de Atualização", name: "update_date", widget: "datetime", required: false}

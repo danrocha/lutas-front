@@ -14,6 +14,7 @@ author:
 release_date: 2019-09-01T19:08:01.692Z
 price: 40
 publish_date: 2019-09-01T19:08:01.710Z
+update_date: 2019-09-01T19:08:01.710Z
 ---
 Florestan Fernandes disse, certa vez, que “os universitários (professores ou estudantes) e os intelectuais de formação universitária (os chamados ‘antigos alunos’) podem percorrer qualquer dos três caminhos que se abrem como ‘possibilidades históricas’ diante deles: o da estagnação relativa; o do desenvolvimento acelerado; ou o da revolução social”. Estávamos, então, sob uma ditatura terrível que, por si só, já entabulava afinidades entre democracia e revolução. Restabelecida a “normalidade democrática” do país, conferimos a ruptura da afinidade: a instituição superior burguesa não seguiria o caminho da revolução social. Em vez disso, seus discípulos no Brasil e na América Latina, muitos dos quais opositores ferrenhos do regime militar, optaram pela reforma universitária, uma mescla a-crítica de estagnação social e desenvolvimento tecnológico.
 
